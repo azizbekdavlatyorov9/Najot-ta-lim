@@ -1,144 +1,182 @@
-//1-masala
-// function longestPalindromicSubstring(s) {
-// let start = 0
-// let maxLen = 1;
-
-//   function expand(l, r) {
-//     while (l >= 0 && r < s.length && s[l] === s[r]) {
-//       if (r - l + 1 > maxLen) {
-//         maxLen = r - l + 1;
-//         start = l;
-//       }
-//       l--;
-//       r++;
+// Array.prototype.ikkigaBolish = function(){
+//   let res = []
+//   for (let i = 0; i < this.length; i++) {
+//     if(typeof this[i] === "number"){
+//       res.push(Math.ceil(this[i] / 2))
 //     }
 //   }
+//   return res
+// }
 
-//   for (let i = 0; i < s.length; i++) {
-//     expand(i, i);     
-//     expand(i, i + 1); 
+// let arr = [22, 55, 84, 63, 41, 9, "salom" ]
+// console.log(arr.bolish());
+
+// Array.prototype.project = function(){
+// for (let i = 0; i < this.length; i++) {
+//   for (let j = this.length - 1; j >= 0; j--) {
+    
+    
+//   }
+  
+// }
+// }
+
+// let arr = [84, 92, 12, 30, 62, 74]
+// arr.project()
+
+// String.protoytype.stringToNumber = function(){
+  
+// }
+
+
+// class MyMath {
+//   static add(a, b) {
+//     return a + b
 //   }
 
-//   return s.substring(start, start + maxLen);
+//   static substract(a, b) {
+//     return a - b
+//   }
 // }
-// console.log(longestPalindromicSubstring("cbbd"));
+
+// console.log(MyMath.substract(3, 5));
+
+// class MyMath {
+//   static add(a, b) {
+//     return [a ** 2, b ** 2]
+//   }
+
+//   static substract(a, b) {
+//     return a / b
+//   }
+// }
+
+// console.log(MyMath.substract(3, 5));
+
+
+//homework 
+//1-masala
+// function addArrayPrototype(arr) {
+//     Array.prototype.double = function() {
+//       let res = []
+//       for(let i = 0; i < this.length; i++){
+//         res.push(this[i] * 2)
+//       }
+//       return res
+//     };
+//     return arr.double();
+// }
 
 
 // 2-masala
-// function rotateArray(arr, k) {
-//   let num = arr.slice(k)
-//   let son = arr.slice(0, k)  
-//   return [...num, ...son] 
+// function addStringReverse(str){
+//   String.prototype.reverse = function (){
+//     let result = []
+//     for(let i = this.length - 1; i >= 0; i-- ){
+//       result += this[i]
+//     }
+//     return result
+//   };
+//   return str.reverse()
 // }
-// console.log(rotateArray([1, 2, 3, 4, 5], 3));
+// console.log(addStringReverse("hello"));
 
 
 // 3-masala
-// function twoSum(arr, target) {
-//   for(let i = 0; i < arr.length; i++ ){
-//     for(let j = i + 1; j < arr.length; j++){
-//      if( arr[i] + arr[j] === target){
-//       return [i , j]
-//      }
+// function addUserPrototype(name) {
+//     function User(name) {
+//       this.name = name;
 //     }
-//   }    
+//     User.prototype.sayHello = function(){
+//       return "Hello " + this.name
+//     }
+//     return new User(name).sayHello();
 // }
-// console.log(twoSum([2, 4, 8, 9, 5], 6));
 
-
-//4-masala
-// function hasSum(arr, target) {
-//   let yigindi = 0
-//   for(let num of arr){
-//     yigindi += num
-//   }  
-//   return yigindi === target
+// 4-masala
+// function multiObjectPrototype(name1, name2) {
+//     function Car(name) {
+//       this.name = name;
+//     }
+//     Array.prototype.getName = function(){
+//       return this.name    
+//     }
+//     const a = new Car(name1);
+//     const b = new Car(name2);
+//     return [a.getName(), b.getName()];
 // }
-// console.log(hasSum([2, 5, 4], 11));
 
-
-//5-masala
-// function arrayDifference(arr1, arr2) {
-//   let result = []
-//   for(let son of arr1){
-//     if(arr2.indexOf(son)=== -1){
-//       result.push(son)
+// 5-masala
+// function customConcat(arr1, arr2) {
+//     Array.prototype.myConcat = function(arr) {
+//     let result = []
+//     for(let i = 0; i < this.length; i++){
+//       result[result.length] = this[i]
 //     }
-//   }
-//   for(let son1 of arr2){
-//     if(arr1.indexOf(son1) === -1){
-//       result.push(son1)
+//     for(let j = 0; j < arr.length; j++){
+//       result[result.length] = arr[j]
 //     }
-//   }
-//   return result
-// }
-// console.log(arrayDifference([1, 5, 6, 8], [5, 6, 9, 8, 7, 7]));
-
-
-// //6-masala
-// function mostFrequentElement(arr) {
-//   let result = arr[0]
-//   let count = {}
-//   let maxCount = 0
-//   for (let son of arr){
-//     count[son] = (count[son] || 0) + 1 
-
-//     if(count[son] > maxCount){
-//       maxCount = count[son]
-//       result = son
-//     }
-//   }
 //     return result
+//     };
+//     return arr1.myConcat(arr2);
 // }
-// console.log(mostFrequentElement([1, 2, 1, 3, 5, 6 , 6, 8, 6]));
 
-//7-masala
-// function incrementDigits(str) {
-//   let result = str.replace(/\d/g, (str) => Number(str) +1 )
-//   return result 
+
+// 6-masala
+// function addKeysPrototype(obj) {
+//     Object.prototype.myKeys = function() {
+//       let result = []
+//       for(let key in this){
+//         if(this.hasOwnProperty(key)){
+//           result.push(key)
+//         }
+//       }
+//       return result
+//     };
+//     return obj.myKeys();
 // }
-// console.log(incrementDigits("a1d5d6h7y"));
+
+
+// 7-masala
+// function addAndDeletePrototype() {
+//     const obj = {};
+//     return obj.sayHi === undefined;
+// }
+
 
 // 8-masala
-// function longestIncreasingSubarray(arr) {
-//   let maxlength = 1
-//   let currentlength = 1
-//   for(let i = 0; i < arr.length; i++){
-//     if(arr[i] > arr[i-1]){
-//       currentlength ++ 
-//     }else{
-//       currentlength = 1
-//     }
-//     if(currentlength > maxlength){
-//       maxlength = currentlength
-//     }
-//   }
-//   return maxlength
+// function stringUpper(str) {
+//     String.prototype.toUpperCustom = function() {
+//       return this.toUpperCase()
+//     };
+//     return str.toUpperCustom();
 // }
-// console.log(longestIncreasingSubarray([10, 20, 30, 10, 40, 50, 52, 55, 6]));
 
-//9-masala
-// function countOccurrences(arr) {
-//   let result = {}
-//   for(let son of arr){ 
-//     if(result[son]){
-//       result[son] += 1
-//     }else{
-//       result[son] = 1
-//     }
-//   }
-//   return result
-// }
-// console.log(countOccurrences([1, 5, 9, 7, 6, 8, 8, 3]));
 
-//10-masala
-// function matrixSum(matrix) {
-//   let result = 0
-//   for(let qator of matrix ){
-//     for(let son of qator){
-//       result += son
+// 9-masala
+// function arraySumPrototype(arr) {
+//     Array.prototype.sum = function() {
+//     let res = 0
+//     for(let i = 0; i < this.length; i++){
+//       res += this[i]
 //     }
-//   }    
-//   return result
+//     return res
+//     };
+//     return arr.sum();
 // }
-// console.log(matrixSum([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
+
+
+// 10-masala
+// function objectValuesSum(obj) {
+//     Object.prototype.valuesSum = function() {
+//      let result = 0
+//      for(let value in this){
+//       if(this.hasOwnProperty(value)){
+//         result += this[value]
+//       }
+//      }
+//      return result
+//     };
+//     return obj.valuesSum();
+// }
+
