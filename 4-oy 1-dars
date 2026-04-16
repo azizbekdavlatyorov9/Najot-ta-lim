@@ -1,0 +1,74 @@
+// 1-masala
+
+// const promise1 = new Promise((resolve, reject) => setTimeout(resolve, 500, "500ms"))
+// const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, "1000ms")) 
+// const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 1500, "1500ms" ))
+
+// Promise.race([promise1, promise2, promise3]).then(message => console.log(message)
+// )
+
+// 2-masala
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// class Dog extends Animal { 
+//   constructor(name, meat){
+//     super(name)
+//     this.meat = meat
+//   }
+// }
+// class Cat extends Animal { 
+//   constructor(name, mouse){
+//     super(name)
+//     this.mouse = mouse
+//   }
+// }
+// class Rabbit extends Animal { 
+//   constructor(name, carrot){
+//     super(name)
+//     this.carrot = carrot
+//   }
+// }
+
+// 3-masala
+// class Calculator {
+//   static add(a, b){
+//     return a + b
+//   }
+//   static subtract(a, b){ 
+//     return a - b
+//   }
+//   static multiply(a, b){
+//     return a * b
+//   }
+// }
+// console.log(Calculator.add(10, 5));
+// console.log(Calculator.subtract(10, 5));
+// console.log(Calculator.multiply(10, 5));
+
+// 4-masala
+// class BankAccount {
+//   #balance;
+
+//   constructor(owner, initialBalance) {
+//     this.owner = owner;
+//     this.#balance = initialBalance;
+//   }
+
+//   deposit(amount) {
+//     if (amount > 0) {
+//       this.#balance += amount;
+//       console.log(`${amount} so'm qo'shildi.`);
+//     }
+//   }
+
+//   getBalance() {
+//     return `Joriy balans: ${this.#balance} so'm`;
+//   }
+// }
+
+// const myAccount = new BankAccount("Ali", 1000);
+// myAccount.deposit(500);             
+// console.log(myAccount.getBalance()); 
